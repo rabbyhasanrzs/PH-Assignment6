@@ -399,6 +399,100 @@ const App = () => {
 
 
 
+          {/* --- PRICING SECTION --- */}
+          <section id="pricing" className="py-24 px-6 md:px-20 bg-white">
+            <div className="max-w-7xl mx-auto">
+              {/* Heading */}
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-extrabold text-[#1E293B] mb-4">Simple, Transparent Pricing</h2>
+                <p className="text-slate-500 text-lg">Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
+              </div>
+
+              {/* Pricing Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                
+                {/* Starter Plan */}
+                <div className="bg-white border border-gray-100 rounded-[2rem] p-10 flex flex-col shadow-sm">
+                  <h3 className="text-2xl font-bold text-[#1E293B] mb-2">Starter</h3>
+                  <p className="text-slate-500 text-sm mb-8">Perfect for getting started</p>
+                  <div className="mb-8 flex items-baseline">
+                    <span className="text-4xl font-black text-[#1E293B]">$0</span>
+                    <span className="text-slate-400 text-lg ml-1 font-medium">/Month</span>
+                  </div>
+                  <ul className="space-y-4 mb-12 flex-grow">
+                    <li className="flex items-center text-[15px] text-slate-600 font-medium gap-3">
+                      <svg className="w-5 h-5 text-[#22C55E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
+                      Access to 10 free tools
+                    </li>
+                    <li className="flex items-center text-[15px] text-slate-600 font-medium gap-3">
+                      <svg className="w-5 h-5 text-[#22C55E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
+                      Basic templates
+                    </li>
+                    <li className="flex items-center text-[15px] text-slate-600 font-medium gap-3">
+                      <svg className="w-5 h-5 text-[#22C55E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
+                      Community support
+                    </li>
+                    <li className="flex items-center text-[15px] text-slate-600 font-medium gap-3">
+                      <svg className="w-5 h-5 text-[#22C55E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
+                      1 project per month
+                    </li>
+                  </ul>
+                  <button className="w-full py-4 bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-2xl font-bold transition-colors">
+                    Get Started Free
+                  </button>
+                </div>
+
+                {/* Pro Plan (Highlighted) */}
+                <div className="bg-[#7C3AED] rounded-[2rem] p-10 flex flex-col shadow-2xl relative scale-105 z-10">
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#FEF3C7] text-[#D97706] px-5 py-1.5 rounded-full text-[12px] font-black uppercase tracking-tight shadow-md">
+                    Most Popular
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Pro</h3>
+                  <p className="text-purple-100 text-sm mb-8 opacity-80">Best for professionals [cite: 66]</p>
+                  <div className="mb-8 flex items-baseline">
+                    <span className="text-4xl font-black text-white">$29</span>
+                    <span className="text-purple-200 text-lg ml-1 font-medium">/Month</span>
+                  </div>
+                  <ul className="space-y-4 mb-12 flex-grow">
+                    {['Access to all premium tools', 'Unlimited templates', 'Priority support', 'Unlimited projects', 'Cloud sync', 'Advanced analytics'].map((feat, i) => (
+                      <li key={i} className="flex items-center text-[15px] text-white font-medium gap-3">
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
+                        {feat}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="w-full py-4 bg-white text-[#7C3AED] hover:bg-gray-50 rounded-2xl font-bold transition-colors shadow-lg">
+                    Start Pro Trial
+                  </button>
+                </div>
+
+                {/* Enterprise Plan */}
+                <div className="bg-white border border-gray-100 rounded-[2rem] p-10 flex flex-col shadow-sm">
+                  <h3 className="text-2xl font-bold text-[#1E293B] mb-2">Enterprise</h3>
+                  <p className="text-slate-500 text-sm mb-8">For teams and businesses</p>
+                  <div className="mb-8 flex items-baseline">
+                    <span className="text-4xl font-black text-[#1E293B]">$99</span>
+                    <span className="text-slate-400 text-lg ml-1 font-medium">/Month</span>
+                  </div>
+                  <ul className="space-y-4 mb-12 flex-grow">
+                    {['Everything in Pro', 'Team collaboration', 'Custom integrations', 'Dedicated support', 'SLA guarantee', 'Custom branding'].map((feat, i) => (
+                      <li key={i} className="flex items-center text-[15px] text-slate-600 font-medium gap-3">
+                        <svg className="w-5 h-5 text-[#22C55E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
+                        {feat}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="w-full py-4 bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-2xl font-bold transition-colors">
+                    Contact Sales
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+
+
 
 
       </div>
