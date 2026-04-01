@@ -27,6 +27,15 @@ const App = () => {
     toast.error("Item removed from cart.", { position: "bottom-right" });
   };
 
+  const handleCheckout = () => {
+    if (cart.length === 0) return;
+    setCart([]);
+    toast.success("Checkout successful! Your cart is now empty.", {
+      icon: "🚀"
+    });
+    setView('products');
+  };
+
      return (
           );
 };
