@@ -20,7 +20,13 @@ const App = () => {
       toast.info(`${product.name} is already in your cart.`);
     }
   };
-  
+
+  const removeFromCart = (id) => {
+    const remaining = cart.filter(item => item.id !== id);
+    setCart(remaining);
+    toast.error("Item removed from cart.", { position: "bottom-right" });
+  };
+
      return (
           );
 };
