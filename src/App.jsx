@@ -493,6 +493,49 @@ const App = () => {
 
 
 
+          {/* --- CTA SECTION --- */}
+          <section className="py-24 px-6 text-center bg-[#7C3AED] text-white">
+            <div className="max-w-4xl mx-auto">
+              {/* Heading */}
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Ready To Transform Your Workflow? 
+              </h2>
+              
+              {/* Subheading */}
+              <p className="text-lg md:text-xl mb-4 opacity-90 font-medium">
+                Join thousands of professionals who are already using Digitools to work smarter.
+              </p>
+              <p className="text-lg opacity-90 mb-10">
+                Start your free trial today.
+              </p>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                <button 
+                  onClick={() => setView('products')}
+                  className="btn bg-white text-[#7C3AED] hover:bg-gray-100 border-none px-10 h-14 rounded-full text-lg font-bold normal-case shadow-lg"
+                >
+                  Explore Products 
+                </button>
+                
+                <button className="btn btn-outline border-white text-white hover:bg-white hover:text-[#7C3AED] px-10 h-14 rounded-full text-lg font-bold normal-case">
+                  View Pricing 
+                </button>
+              </div>
+
+              {/* Trust Badges / Footer Text */}
+              <div className="text-sm opacity-80 font-medium flex flex-wrap justify-center gap-4 md:gap-2">
+                <span>14-day free trial</span>
+                <span className="hidden md:inline">•</span>
+                <span>No credit card required</span>
+                <span className="hidden md:inline">•</span>
+                <span>Cancel anytime</span>
+              </div>
+            </div>
+          </section>
+
+
+
 
 
       </div>
