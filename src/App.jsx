@@ -84,6 +84,67 @@ const App = () => {
 
 
 
+          {/* --- BANNER --- */}
+          <header className="hero min-h-[80vh] py-16 px-6 md:px-20 bg-white">
+            <div className="hero-content flex-col lg:flex-row gap-16 max-w-7xl mx-auto p-0">
+              
+              {/* Text Content */}
+              <div className="text-left w-full lg:w-1/2">
+                {/* New Badge */}
+                <div className="inline-flex items-center gap-2 bg-[#EEF2FF] px-4 py-1.5 rounded-full mb-8 border border-[#E0E7FF]">
+                  <div className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse"></div>
+                  <span className="text-[#7C3AED] text-sm font-semibold">New: AI-Powered Tools Available</span>
+                </div>
+
+                {/* Heading */}
+                <h1 className="text-5xl md:text-[60px] font-bold text-[#1E293B] leading-[1.1] mb-6 tracking-tight">
+                  Supercharge Your <br />
+                  <span className="text-[#4F39F6]">Digital Workflow</span>
+                </h1>
+
+                {/* Description */}
+                <p className="text-lg text-slate-500 mb-4 leading-relaxed max-w-lg">
+                  Access premium AI tools, design assets, templates, and productivity software—all in one place. Start creating faster today.
+                </p>
+                
+                <p className="text-[#7C3AED] font-semibold mb-10 cursor-pointer hover:underline underline-offset-4">
+                  Explore Products
+                </p>
+
+                {/* Buttons */}
+                <div className="flex flex-wrap gap-4">
+                  <button className="btn bg-[#7C3AED] hover:bg-[#6D28D9] text-white border-none px-8 h-[56px] rounded-4xl text-[16px] font-bold normal-case">
+                    Explore Products
+                  </button>
+                  
+                  <button className="btn bg-white hover:bg-gray-50 border border-[#7C3AED] text-[#7C3AED] px-8 h-[56px] rounded-4xl text-[16px] font-bold normal-case gap-3">
+                    <div className="w-6 h-6 border-2 border-[#7C3AED] rounded-full flex items-center justify-center pl-0.5">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 fill-[#7C3AED]" viewBox="0 0 24 24">
+                        <path d="M3 22v-20l18 10-18 10z" />
+                      </svg>
+                    </div>
+                    Watch Demo 
+                  </button>
+                </div>
+              </div>
+
+              {/* Banner Image */}
+              <div className="w-full lg:w-1/2 relative">
+                <div className="bg-gray-100 rounded-[2rem] overflow-hidden shadow-2xl">
+                  <img 
+                    src="/src/assets/banner.png" 
+                    className="w-full h-full object-cover" 
+                    alt="Digital Workflow Visual" 
+                  />
+                </div>
+              </div>
+
+            </div>
+          </header>
+
+
+
+
 
       </div>
     );
