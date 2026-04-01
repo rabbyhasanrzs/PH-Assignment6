@@ -177,6 +177,153 @@ const App = () => {
 
 
 
+          {/* --- MAIN SECTION (PRODUCT & CART) --- */}
+          <main className="py-20 px-6 md:px-20 bg-white">
+            <div className="max-w-7xl mx-auto">
+              {/* Heading Section */}
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-[#1E293B] mb-4">Premium Digital Tools</h2>
+                <p className="text-slate-500 max-w-2xl mx-auto mb-10 text-[15px]">
+                  Choose from our curated collection of premium digital products designed to boost your productivity and creativity.
+                </p>
+
+                {/* Pill Toggle Buttons */}
+                <div className="inline-flex bg-white border border-gray-200 p-1 rounded-full shadow-sm">
+                  <button 
+                    className={`px-8 py-2 rounded-full text-sm font-bold transition-all ${view === 'products' ? 'bg-[#7C3AED] text-white' : 'text-slate-600 hover:text-[#7C3AED]'}`}
+                    onClick={() => setView('products')}
+                  >
+                    Products
+                  </button>
+                  <button 
+                    className={`px-8 py-2 rounded-full text-sm font-bold transition-all ${view === 'cart' ? 'bg-[#7C3AED] text-white' : 'text-slate-600 hover:text-[#7C3AED]'}`}
+                    onClick={() => setView('cart')}
+                  >
+                    Cart ({cart.length})
+                  </button>
+                </div>
+              </div>
+
+              {/* Products View */}
+              {view === 'products' && (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {productsData.map((product) => (
+                    <div key={product.id} className="bg-white border border-gray-100 rounded-[2rem] p-8 shadow-sm hover:shadow-md transition-shadow relative flex flex-col">
+                      {/* Tag/Badge */}
+                      <div className={`absolute top-6 right-6 px-4 py-1 rounded-full text-[11px] font-bold ${
+                        product.tag === 'Best Seller' ? 'bg-[#FEF3C7] text-[#D97706]' : 
+                        product.tag === 'Popular' ? 'bg-[#E0E7FF] text-[#4338CA]' : 
+                        'bg-[#DCFCE7] text-[#15803D]'
+                      }`}>
+                        {product.tag}
+                      </div>
+
+                      {/* Icon Circle */}
+                      <div className="w-14 h-14 bg-gray-50 rounded-full flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        {product.icon}
+                      </div>
+
+                      {/* Content */}
+                      <h3 className="text-xl font-bold text-[#1E293B] mb-3">{product.name}</h3>
+                      <p className="text-slate-500 text-sm mb-6 leading-relaxed flex-grow">
+                        {product.description}
+                      </p>
+
+                      {/* Pricing */}
+                      <div className="mb-6 flex items-baseline">
+                        <span className="text-2xl font-bold text-[#1E293B]">${product.price}</span>
+                        <span className="text-slate-400 text-sm ml-1 capitalize font-medium">/{product.period}</span>
+                      </div>
+
+                      {/* Features List */}
+                      <ul className="space-y-3 mb-8">
+                        {product.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-[13px] text-slate-600 font-medium">
+                            <svg className="w-4 h-4 text-[#22C55E] mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                            </svg>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Action Button */}
+                      <button 
+                        onClick={() => addToCart(product)}
+                        className="w-full py-4 bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-2xl font-bold transition-colors text-[15px]"
+                      >
+                        {cart.find(item => item.id === product.id) ? "✓ Added to Cart" : "Buy Now"}
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+          {/* Cart View */}
+          {view === 'cart' && (
+              <div className="max-w-2xl mx-auto mt-10">
+                <div className="bg-white border border-gray-100 rounded-[2rem] p-8 shadow-md">
+                  <h2 className="text-2xl font-bold text-[#1E293B] mb-6">Your Cart</h2>
+
+                  {cart.length === 0 ? (
+                    <div className="text-center py-16">
+                      <p className="text-slate-400 text-lg mb-6">Your cart is empty.</p>
+                      <button
+                        onClick={() => setView('products')}
+                        className="btn bg-[#7C3AED] text-white border-none px-8 rounded-full normal-case font-bold"
+                      >
+                        Browse Products
+                      </button>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="space-y-4 mb-8">
+                        {cart.map((item) => (
+                          <div key={item.id} className="flex items-center justify-between bg-gray-50 rounded-2xl px-6 py-4">
+                            <div className="flex items-center gap-4">
+                              {/* Icon circle like in the screenshot */}
+                              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-2xl shadow-sm border border-gray-100">
+                                {item.icon}
+                              </div>
+                              <div>
+                                <p className="font-bold text-[#1E293B]">{item.name}</p>
+                                <p className="text-slate-400 text-sm">${item.price}</p>
+                              </div>
+                            </div>
+                            <button
+                              onClick={() => removeFromCart(item.id)}
+                              className="text-[#7C3AED] font-semibold text-sm hover:text-red-500 transition-colors"
+                            >
+                              Remove
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Total */}
+                      <div className="flex justify-between items-center mb-6 px-2">
+                        <span className="text-slate-500 font-medium">Total:</span>
+                        <span className="text-2xl font-black text-[#1E293B]">${totalCost}</span>
+                      </div>
+
+                      {/* Checkout Button */}
+                      <button
+                        onClick={handleCheckout}
+                        className="w-full py-4 bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-2xl font-bold text-[16px] transition-colors"
+                      >
+                        Proceed To Checkout
+                      </button>
+                    </>
+                  )}
+                </div>
+              </div>
+            )}
+
+            </div>
+          </main>
+
+
+
 
 
       </div>
