@@ -132,7 +132,7 @@ const App = () => {
               <div className="w-full lg:w-1/2 relative">
                 <div className="bg-gray-100 rounded-[2rem] overflow-hidden shadow-2xl">
                   <img 
-                    src="/src/assets/banner.png" 
+                    src="/Assignment6/src/assets/banner.png" 
                     className="w-full h-full object-cover" 
                     alt="Digital Workflow Visual" 
                   />
