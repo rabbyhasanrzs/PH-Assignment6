@@ -144,6 +144,39 @@ const App = () => {
 
 
 
+          {/* --- STATS SECTION --- */}
+          <section className="bg-[#7C3AED] py-12 px-6 md:px-20">
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center text-white">
+              
+              {/* Active Users */}
+              <div className="flex-1 text-center py-6 md:py-0">
+                <h2 className="text-5xl font-bold mb-2">50K+</h2>
+                <p className="text-lg opacity-90">Active Users</p>
+              </div>
+
+              {/* Divider */}
+              <div className="hidden md:block w-[1px] h-16 bg-white/30"></div>
+
+              {/* Premium Tools */}
+              <div className="flex-1 text-center py-6 md:py-0">
+                <h2 className="text-5xl font-bold mb-2">200+</h2>
+                <p className="text-lg opacity-90">Premium Tools</p>
+              </div>
+
+              {/* Divider */}
+              <div className="hidden md:block w-[1px] h-16 bg-white/30"></div>
+
+              {/* Rating */}
+              <div className="flex-1 text-center py-6 md:py-0">
+                <h2 className="text-5xl font-bold mb-2">4.9</h2>
+                <p className="text-lg opacity-90">Rating</p>
+              </div>
+
+            </div>
+          </section>
+
+
+
 
 
       </div>
