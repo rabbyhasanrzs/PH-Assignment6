@@ -325,6 +325,81 @@ const App = () => {
 
 
 
+          {/* --- STEPS SECTION --- */}
+          <section className="py-24 px-6 md:px-20 bg-[#F9FAFC]">
+            <div className="max-w-7xl mx-auto">
+              {/* Heading */}
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-extrabold text-[#1E293B] mb-4">Get Started In 3 Steps</h2>
+                <p className="text-slate-500 text-lg">Start using premium digital tools in minutes, not hours.</p>
+              </div>
+
+              {/* Steps Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                {/* Step 1 */}
+                <div className="relative bg-white border border-gray-100 rounded-[2rem] p-10 shadow-sm hover:shadow-md transition-shadow text-center group">
+                  {/* Step Number Badge */}
+                  <div className="absolute top-6 right-6 w-10 h-10 bg-[#7C3AED] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg shadow-purple-100">
+                    01
+                  </div>
+                  
+                  {/* Icon Circle */}
+                  <div className="w-24 h-24 bg-[#F5F3FF] rounded-full flex items-center justify-center mx-auto mb-8 transition-transform group-hover:scale-110">
+                    <svg className="w-10 h-10 text-[#7C3AED]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-[#1E293B] mb-4">Create Account</h3>
+                  <p className="text-slate-500 leading-relaxed text-[15px]">
+                    Signup for free in seconds. No credit card required to get started.
+                  </p>
+                </div>
+
+                {/* Step 2 */}
+                <div className="relative bg-white border border-gray-100 rounded-[2rem] p-10 shadow-sm hover:shadow-md transition-shadow text-center group">
+                  <div className="absolute top-6 right-6 w-10 h-10 bg-[#7C3AED] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg shadow-purple-100">
+                    02
+                  </div>
+
+                  <div className="w-24 h-24 bg-[#F5F3FF] rounded-full flex items-center justify-center mx-auto mb-8 transition-transform group-hover:scale-110">
+                    <svg className="w-10 h-10 text-[#7C3AED]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                    </svg>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-[#1E293B] mb-4">Choose Products</h3>
+                  <p className="text-slate-500 leading-relaxed text-[15px]">
+                    Browse our catalog and select the tools that fit your needs.
+                  </p>
+                </div>
+
+                {/* Step 3 */}
+                <div className="relative bg-white border border-gray-100 rounded-[2rem] p-10 shadow-sm hover:shadow-md transition-shadow text-center group">
+                  <div className="absolute top-6 right-6 w-10 h-10 bg-[#7C3AED] text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg shadow-purple-100">
+                    03
+                  </div>
+
+                  <div className="w-24 h-24 bg-[#F5F3FF] rounded-full flex items-center justify-center mx-auto mb-8 transition-transform group-hover:scale-110">
+                    <svg className="w-10 h-10 text-[#7C3AED]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-[#1E293B] mb-4">Start Creating</h3>
+                  <p className="text-slate-500 leading-relaxed text-[15px]">
+                    Download and start using your premium tools immediately.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+
+
+
 
       </div>
     );
